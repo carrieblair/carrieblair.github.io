@@ -49,19 +49,19 @@
     width: 100%;
     height: 100%;
     background: inherit; /* Use the section's background image */
-    filter: grayscale(100%);
-    opacity: 0.5;
+    filter: grayscale(80%);
+    /*opacity: 0.5;*/
     z-index: -1; /* Keep it behind text */
 }
 
 
 /* Background images (replace with your GitHub repo images) */
-#section1 { background-image: url('IMG_5050.JPEG'); }
+#section1 { background-image: url('IMG_4303.JPEG'); }
 #section2 { background-image: url('IMG_3984.JPEG'); }
 #section3 { background-image: url('IMG_2486.JPEG'); }
 #section4 { background: black; } /* Video section, no image */
-#section5 { background-image: url(''); }
-#section6 { background-image: url(''); }
+#section5 { background-image: url('IMG_8563.JPEG'); }
+#section6 { background-image: url('cow'); }
 
 /* Style for video section */
 video {
