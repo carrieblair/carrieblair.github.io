@@ -1,0 +1,24 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+    transition: transform 1s ease-in-out;
+}
+
+#section1 { background: #FF5733; }
+#section2 { background: #33FF57; }
+#section3 { background: #3357FF; }
+#section4 { background: #FF33A1; }
+#section5 { background: #A133FF; }
+#section6 { background: #33FFF3; }
