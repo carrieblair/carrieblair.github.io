@@ -7,7 +7,7 @@
 html, body {
     width: 100%;
     height: 100%;
-    overflow: hidden; /* Prevent default scroll behavior */
+    overflow: hidden;
     font-family: Arial, sans-serif;
 }
 
@@ -19,6 +19,15 @@ html, body {
     scroll-behavior: smooth;
 }
 
+/* Hide scrollbar */
+.container::-webkit-scrollbar {
+    display: none;
+}
+.container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
 .section {
     width: 100vw;
     height: 100vh;
@@ -28,11 +37,27 @@ html, body {
     font-size: 3rem;
     color: white;
     scroll-snap-align: start;
+    background-size: cover;
+    background-position: center;
 }
 
-#section1 { background: #FF5733; }
-#section2 { background: #33FF57; }
-#section3 { background: #3357FF; }
-#section4 { background: #FF33A1; }
-#section5 { background: #A133FF; }
-#section6 { background: #33FFF3; }
+/* Background images (replace with your GitHub repo images) */
+#section1 { background-image: url('https://via.placeholder.com/1920x1080/FF5733/FFFFFF?text=Welcome'); }
+#section2 { background-image: url('https://via.placeholder.com/1920x1080/33FF57/FFFFFF?text=About+Us'); }
+#section3 { background-image: url('https://via.placeholder.com/1920x1080/3357FF/FFFFFF?text=Gallery'); }
+#section4 { background: black; } /* Video section, no image */
+#section5 { background-image: url('https://via.placeholder.com/1920x1080/FF33A1/FFFFFF?text=Testimonials'); }
+#section6 { background-image: url('https://via.placeholder.com/1920x1080/A133FF/FFFFFF?text=Contact+Us'); }
+
+/* Style for video section */
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1, h2, p, blockquote, figcaption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 5px;
+}
