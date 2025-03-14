@@ -2,7 +2,7 @@ let sectionIndex = 0;
 let scrollCount = 0;
 const sections = document.querySelectorAll(".section");
 const totalSections = sections.length;
-const scrollThreshold = 3; // How many scrolls before changing sections
+const scrollThreshold = 3; // Number of scrolls before switching
 
 function scrollHandler(event) {
     scrollCount++;
@@ -18,9 +18,13 @@ function scrollHandler(event) {
             if (sectionIndex > 0) sectionIndex--;
         }
 
-        gsap.to(window, { duration: 1, scrollTo: sections[sectionIndex] });
+        // Scroll to the selected section smoothly
+        window.scrollTo({
+            top: sections[sectionIndex].offsetTop,
+            behavior: "smooth"
+        });
     }
 }
 
-// Add event listener for mouse wheel
+// Add event listener for scrolling
 window.addEventListener("wheel", scrollHandler);
