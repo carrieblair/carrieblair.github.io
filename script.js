@@ -3,6 +3,7 @@ let scrollCount = 0;
 const sections = document.querySelectorAll(".section");
 const totalSections = sections.length;
 const scrollThreshold = 3; // Number of scrolls before switching
+const container = document.querySelector(".container");
 
 function scrollHandler(event) {
     scrollCount++;
@@ -19,7 +20,7 @@ function scrollHandler(event) {
         }
 
         // Scroll to the selected section smoothly
-        window.scrollTo({
+        container.scrollTo({
             top: sections[sectionIndex].offsetTop,
             behavior: "smooth"
         });
