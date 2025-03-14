@@ -42,7 +42,7 @@ html, body {
 }
 
 /* Background images (replace with your GitHub repo images) */
-#section1 { background-image: url('https://via.placeholder.com/1920x1080/FF5733/FFFFFF?text=Welcome'); }
+#section1 { background-image: url('IMG_2486.JPEG'); }
 #section2 { background-image: url('https://via.placeholder.com/1920x1080/33FF57/FFFFFF?text=About+Us'); }
 #section3 { background-image: url('https://via.placeholder.com/1920x1080/3357FF/FFFFFF?text=Gallery'); }
 #section4 { background: black; } /* Video section, no image */
