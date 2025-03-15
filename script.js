@@ -54,7 +54,7 @@ const images = [
     "images/IMG_2486.JPEG",
     "images/IMG_5050.JPEG",
     "images/IMG_8563.JPEG",
-    "images/IMG_3984.JPG",
+    "images/IMG_3984.jpg",
     "images/cow"
 ];
 
