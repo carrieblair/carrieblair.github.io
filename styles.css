@@ -19,7 +19,7 @@ html, body {
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
-    background-image: url('tulips-1.jpg'); 
+    background-image: url('images/tulips-1.jpg'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -81,7 +81,7 @@ header,article,figure,blockquote,footer {
     border-radius: 50%;
     border: 10px solid white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    background-image: url('profphoto.jpg'); /* Replace with actual image */
+    background-image: url('images/profphoto.jpg'); /* Replace with actual image */
     background-size: cover;
     background-position: center;
     flex-shrink: 0;
@@ -176,7 +176,7 @@ a:visited{
     border-radius: 10%;
     border: 5px solid white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    background-image: url('IMG_3984.jpg'); /* Replace with actual image */
+    background-image: url('images/IMG_3984.jpg'); /* Replace with actual image */
     background-size: cover;
     background-position: center;
     flex-shrink: 0;
