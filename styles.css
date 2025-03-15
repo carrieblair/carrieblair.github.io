@@ -73,7 +73,7 @@ html, body {
 }
 
 /* First section - full screen background that stays fixed */
-#section1 {
+.container {
     background-image: url('tulips-1.jpg'); /* Replace with your image */
     background-size: cover;
     background-position: center;
@@ -143,6 +143,7 @@ h1{
     color:rgb(255, 165, 180);
     font-family: 'Abril Fatface', serif;
     font-weight: normal;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Dark glow effect */
 }
 h2{
     font-family: 'Merriweather', serif;
