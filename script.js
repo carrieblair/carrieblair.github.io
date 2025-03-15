@@ -2,7 +2,7 @@ let sectionIndex = 0;
 let scrollCount = 0;
 const sections = document.querySelectorAll(".section");
 const totalSections = sections.length;
-const scrollThreshold = 8;
+const scrollThreshold = 3;
 const container = document.querySelector(".container");
 
 // Function to apply fade effects
