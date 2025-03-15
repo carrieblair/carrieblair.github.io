@@ -124,3 +124,14 @@ p{
     justify-content: center; /* Center text vertically */
     text-align: center; /* Center the text */
 }
+/* Flexbox layout for profile and text */
+header {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center content horizontally */
+    gap: 20px; /* Space between image and text */
+    text-align: left; /* Align text inside */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    padding: 20px;
+    border-radius: 10px;
+}
