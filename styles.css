@@ -112,7 +112,9 @@ video {
 }
 
 p, blockquote, figcaption {
-
+    font-family: 'Merriweather', serif;
+    font-weight: lighter;
+    color:white;
     padding: 15px;
     border-radius: 5px;
 }
@@ -148,4 +150,7 @@ h3{
     transition: opacity 0.5s ease-in-out;
     z-index: 1000; /* Ensure it stays on top */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.6); /* Dark glow effect */
+}
+article{
+    background: rgb(0,0,0,0.4);
 }
