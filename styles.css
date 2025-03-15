@@ -159,6 +159,7 @@ blockquote{
     display: flex;
     flex-direction: column; /* Stack divs vertically */
     gap: 10px; /* Space between divs */
+    text-align: center;
 }
 /* Sticky Welcome Message */
 .sticky-header {
