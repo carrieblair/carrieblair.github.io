@@ -143,7 +143,7 @@ h1{
     color:rgb(255, 165, 180);
     font-family: 'Abril Fatface', serif;
     font-weight: normal;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Dark glow effect */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.6); /* Dark glow effect */
 }
 h2{
     font-family: 'Merriweather', serif;
@@ -151,14 +151,14 @@ h2{
     margin-top: -35px;
     font-size: xx-large;
     color:rgb(255, 165, 180);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Dark glow effect */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.6); /* Dark glow effect */
 }
 h3{
     font-family: 'Merriweather', serif;
     font-weight: lighter;
     font-size:medium;
     color:rgb(255, 165, 180);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Dark glow effect */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.6); /* Dark glow effect */
 }
 /* Sticky Welcome Message */
 .sticky-header {
@@ -170,5 +170,5 @@ h3{
     opacity: 0; /* Initially hidden */
     transition: opacity 0.5s ease-in-out;
     z-index: 1000; /* Ensure it stays on top */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Dark glow effect */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.6); /* Dark glow effect */
 }
