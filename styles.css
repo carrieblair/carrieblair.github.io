@@ -146,5 +146,7 @@ h1{
 }
 h2{
     font-family: 'Merriweather', serif;
-    font-weight: thin;
+    font-weight: lighter;
+    margin-top: -35px;
+    color:rgb(255, 165, 180);
 }
