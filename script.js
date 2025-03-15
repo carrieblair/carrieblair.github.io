@@ -75,4 +75,4 @@ function changeImage() {
 }
 
 // Change image every 4 seconds
-setInterval(changeImage, 4000);
+setInterval(changeImage, 5000);
