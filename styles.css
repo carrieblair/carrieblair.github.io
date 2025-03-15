@@ -65,6 +65,10 @@ html, body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers everything */
+    text-align: center;
 }
 
 /* Header layout */
@@ -76,6 +80,7 @@ header {
     background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
+    max-width: 600px; /* Prevents text from going too wide */
 }
 
 /* Profile picture */
