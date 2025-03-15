@@ -134,13 +134,17 @@ video {
     object-fit: cover;
 }
 
-h1, h2, p, blockquote, figcaption {
+p, blockquote, figcaption {
 
     padding: 15px;
     border-radius: 5px;
 }
 h1{
     color:rgb(255, 165, 180);
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Abril Fatface', serif;
     font-weight: normal;
+}
+h2{
+    font-family: 'Merriweather', serif;
+    font-weight: thin;
 }
