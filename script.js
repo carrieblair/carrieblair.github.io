@@ -3,7 +3,7 @@ let scrollCount = 0;
 const sections = document.querySelectorAll(".section");
 const totalSections = sections.length;
 const scrollThreshold = 5;
-const scrollCooldown = 500;
+const scrollCooldown = 700;
 let lastScrollTime = 0;
 const stickyHeader = document.querySelector(".sticky-header");
 
