@@ -2,7 +2,9 @@ let sectionIndex = 0;
 let scrollCount = 0;
 const sections = document.querySelectorAll(".section");
 const totalSections = sections.length;
-const scrollThreshold = 3;
+const scrollThreshold = 5; // ⬅️ INCREASED from 3 to 5 (Takes more scrolls)
+const scrollCooldown = 500; // ⬅️ ADDED: 500ms cooldown between scrolls
+let lastScrollTime = 0;
 const container = document.querySelector(".container");
 
 // Function to apply fade effects
