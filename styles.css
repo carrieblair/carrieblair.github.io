@@ -39,6 +39,16 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
     background-image: url('IMG_4303.JPEG');
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://via.placeholder.com/1920x1080'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps image in place while scrolling */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Add a black & white filter and lower opacity */
