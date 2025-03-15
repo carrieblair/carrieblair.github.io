@@ -63,7 +63,7 @@ html, body {
 }
 
 /* Header layout */
-header {
+header,article,figure,blockquote,footer {
     display: flex;
     align-items: center;
     justify-content: center;
