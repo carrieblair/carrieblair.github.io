@@ -151,6 +151,14 @@ blockquote{
     font-family: 'Abril Fatface', serif;
     width: 70%;
     height:70%;
+    display: flex;
+    justify-content: center; /* Center content */
+    align-items: center;
+}
+.stacked-container {
+    display: flex;
+    flex-direction: column; /* Stack divs vertically */
+    gap: 10px; /* Space between divs */
 }
 /* Sticky Welcome Message */
 .sticky-header {
