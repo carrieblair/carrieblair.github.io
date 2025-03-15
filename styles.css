@@ -77,7 +77,7 @@ header {
     align-items: center;
     justify-content: center;
     gap: 20px; /* Space between image and text */
-    background: rgba(0, 0, 0, 0.5);
+    
     padding: 20px;
     border-radius: 10px;
     max-width: 600px; /* Prevents text from going too wide */
@@ -103,6 +103,7 @@ header {
     justify-content: center;
     text-align: center;
     color: white;
+    font-size: xx-large;
 }
 
 /* Other sections background placeholders 
