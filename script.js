@@ -34,7 +34,11 @@ function scrollHandler(event) {
 
 // Function to show/hide the sticky header
 function handleScroll() {
-    stickyHeader.style.opacity = window.scrollY > window.innerHeight * 0.8 ? "1" : "0";
+    if (window.scrollY > window.innerHeight * 0.8) {
+        stickyHeader.style.opacity = "1"; // Show when scrolling down
+    } else {
+        stickyHeader.style.opacity = "0"; // Hide in Section 1
+    }
 }
 
 // Function to update active section
