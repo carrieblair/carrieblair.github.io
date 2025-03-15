@@ -157,3 +157,14 @@ article{
 a:visited{
     color:white;
 }
+.travel-photos{
+    width: 400px;
+    height: 400px;
+    border-radius: 10%;
+    border: 5px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-image: url('IMG_3984.JPEG'); /* Replace with actual image */
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
