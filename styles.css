@@ -73,7 +73,7 @@ html, body {
 }
 
 /* First section - full screen background that stays fixed */
-.container {
+#section1 {
     background-image: url('tulips-1.jpg'); /* Replace with your image */
     background-size: cover;
     background-position: center;
