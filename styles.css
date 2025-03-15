@@ -90,13 +90,15 @@ p{
     width: 150px;
     height: 150px;
     border-radius: 50%; /* Makes it a circle */
-    overflow: hidden; /* Prevents image overflow */
+    
     border: 10px solid white; /* 10px border */
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional shadow */
     background-image: url('IMG_7018.jpg');
+    background-size:cover;
+    background-position: center;
 }
 
 /* Ensure the image fits inside the circle */
