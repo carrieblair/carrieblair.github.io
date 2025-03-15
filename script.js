@@ -50,3 +50,28 @@ function updateActiveSection() {
 
 window.addEventListener("wheel", scrollHandler);
 window.addEventListener("scroll", handleScroll);
+const slideshow = document.getElementById("slideshow");
+const images = [
+    "IMG_2486.JPEG",
+    "IMG_5050.JPEG",
+    "IMG_8563.JPEG"
+];
+
+let currentIndex = 0;
+
+function changeImage() {
+    // Fade out
+    slideshow.style.opacity = "0";
+
+    setTimeout(() => {
+        // Change the image source
+        currentIndex = (currentIndex + 1) % images.length;
+        slideshow.src = images[currentIndex];
+
+        // Fade in
+        slideshow.style.opacity = "1";
+    }, 1000); // Matches fade-out transition time
+}
+
+// Change image every 4 seconds
+setInterval(changeImage, 4000);
