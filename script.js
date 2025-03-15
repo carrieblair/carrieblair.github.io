@@ -52,9 +52,9 @@ window.addEventListener("wheel", scrollHandler);
 window.addEventListener("scroll", handleScroll);
 const slideshow = document.getElementById("slideshow");
 const images = [
-    "https://carrieblair.github.io/carrieblair/images/IMG_2486.JPEG",
-    "https://carrieblair.github.io/carrieblair/images/IMG_5050.JPEG",
-    "https://carrieblair.github.io/carrieblair/images/IMG_8563.JPEG"
+    "images/IMG_2486.JPEG",
+    "images/IMG_5050.JPEG",
+    "images/IMG_8563.JPEG"
 ];
 
 let currentIndex = 0;
