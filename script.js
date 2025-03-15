@@ -44,5 +44,15 @@ function scrollHandler(event) {
     }
 }
 
+const stickyHeader = document.querySelector(".sticky-header");
+
+function handleScroll() {
+    if (window.scrollY > window.innerHeight * 0.8) {
+        stickyHeader.style.opacity = "1"; // Show sticky header
+    } else {
+        stickyHeader.style.opacity = "0"; // Hide when in Section 1
+    }
+}
+
 // Add event listener for scrolling
 window.addEventListener("wheel", scrollHandler);
