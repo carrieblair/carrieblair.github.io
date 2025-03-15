@@ -52,9 +52,9 @@ window.addEventListener("wheel", scrollHandler);
 window.addEventListener("scroll", handleScroll);
 const slideshow = document.getElementById("slideshow");
 const images = [
-    "https://github.com/carrieblair/carrieblair.github.io/blob/491fa882ed55a0fbac3aeac40caad2fcae972fd0/IMG_2486.JPEG",
-    "https://github.com/carrieblair/carrieblair.github.io/blob/491fa882ed55a0fbac3aeac40caad2fcae972fd0/IMG_5050.JPEG",
-    "https://github.com/carrieblair/carrieblair.github.io/blob/491fa882ed55a0fbac3aeac40caad2fcae972fd0/IMG_8563.JPEG"
+    "https://github.com/carrieblair/carrieblair.github.io/IMG_2486.JPEG",
+    "https://github.com/carrieblair/carrieblair.github.io/IMG_5050.JPEG",
+    "https://github.com/carrieblair/carrieblair.github.io/IMG_8563.JPEG"
 ];
 
 let currentIndex = 0;
