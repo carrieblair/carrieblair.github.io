@@ -54,7 +54,9 @@ const slideshow = document.getElementById("slideshow");
 const images = [
     "images/IMG_2486.JPEG",
     "images/IMG_5050.JPEG",
-    "images/IMG_8563.JPEG"
+    "images/IMG_8563.JPEG",
+    "images/IMG_3984.JPG",
+    "images/cow"
 ];
 
 let currentIndex = 0;
