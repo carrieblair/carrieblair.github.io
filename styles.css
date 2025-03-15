@@ -141,4 +141,6 @@ h1, h2, p, blockquote, figcaption {
 }
 h1{
     color:rgb(255, 165, 180);
+    font-family: 'Romie', cursive;
+    font-weight: normal;
 }
