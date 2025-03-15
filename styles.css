@@ -197,11 +197,11 @@ a:visited{
     transition: opacity 1s ease-in-out;
 }
 @media (max-width: 768px) {
-    p,h1,h3,h4 {
+    p,h3,h4 {
         font-size: medium; /* Reduce size for smaller screens */
     }
 
-    h2 {
+    h1,h2 {
         font-size: large; /* Adjust paragraph and subheadings */
     }
 }
