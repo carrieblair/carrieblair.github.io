@@ -139,6 +139,13 @@ h3{
     color:rgb(255, 165, 180);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.6); /* Dark glow effect */
 }
+h4{
+    font-family: 'Merriweather', serif;
+    font-weight: lighter;
+    font-size:x-large;
+    color:white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.6); /* Dark glow effect */
+}
 blockquote{
     font-size: xx-large;
     font-family: 'Abril Fatface', serif;
