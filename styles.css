@@ -69,7 +69,7 @@ html, body {
     height: 100%;
     background: inherit; /* Inherit the section background */
     filter: grayscale(100%); /* Apply grayscale effect */
-    z-index: 0; /* Keep it behind other content */
+    z-index: -1; /* Keep it behind other content */
 }
 
 /* First section - full screen background that stays fixed */
