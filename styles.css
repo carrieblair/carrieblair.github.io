@@ -42,7 +42,6 @@
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-image: url('https://via.placeholder.com/1920x1080'); /* Replace with your image */
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Keeps image in place while scrolling */
