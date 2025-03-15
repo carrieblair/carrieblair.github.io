@@ -71,7 +71,7 @@ video {
 }
 
 h2, p, blockquote, figcaption, h1, h3{
-    background: rgba(0, 0, 0, 0.5);
+    /*background: rgba(0, 0, 0, 0.5);*/
     padding: 15px;
     border-radius: 5px;
 }
