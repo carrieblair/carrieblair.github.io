@@ -52,13 +52,18 @@ html, body {
     background: rgba(0, 0, 0, 0.4); /* Optional: Dark overlay to enhance text visibility */
 }
 
-
-/* First section - full screen background that stays fixed */
 #section1 {
     display: flex;
     align-items: center;
     justify-content: center; /* Centers everything */
     text-align: center;
+}
+
+#section3 {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers everything */
+    text-align: left;
 
 }
 
@@ -71,7 +76,7 @@ header,article,figure,blockquote,footer {
     
     padding: 20px;
     border-radius: 10px;
-    max-width: 600px; /* Prevents text from going too wide */
+    max-width: 65%; /* Prevents text from going too wide */
 }
 
 /* Profile picture */
@@ -159,6 +164,9 @@ blockquote{
     display: flex;
     flex-direction: column; /* Stack divs vertically */
     gap: 10px; /* Space between divs */
+    text-align: center;
+}
+.left {
     text-align: center;
 }
 /* Sticky Welcome Message */
