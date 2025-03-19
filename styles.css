@@ -79,6 +79,10 @@ header,article,figure,blockquote,footer {
     max-width: 65%; /* Prevents text from going too wide */
 }
 
+#thin{
+    max-width: 50%; /* Prevents text from going too wide */
+}
+
 /* Profile picture */
 .profile-picture {
     width: 200px;
