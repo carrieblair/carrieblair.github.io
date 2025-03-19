@@ -167,7 +167,7 @@ blockquote{
     text-align: center;
 }
 .left {
-    text-align: center;
+    text-align: left;
 }
 /* Sticky Welcome Message */
 .sticky-header {
