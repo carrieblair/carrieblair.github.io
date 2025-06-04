@@ -1,0 +1,227 @@
+/* Reset default margins & paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevent default scrolling */
+  font-family: Arial, sans-serif;
+}
+
+/* Scrollable container */
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  background-image: url('../assets/tulips-1.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Hide scrollbar */
+.container::-webkit-scrollbar {
+  display: none;
+}
+.container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;         /* Each section fills viewport */
+}
+
+/* Smooth fade animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.section {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.4); /* Optional: Dark overlay to enhance text visibility */
+}
+
+#section1 {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers everything */
+  text-align: center;
+}
+
+#section3 {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers everything */
+  text-align: left;
+
+}
+
+/* Header layout */
+header,article,figure,blockquote,footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Space between image and text */
+  
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 65%; /* Prevents text from going too wide */
+}
+
+#thin{
+  max-width: 50%; /* Prevents text from going too wide */
+}
+
+/* Profile picture */
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 10px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-image: url('../assets/profphoto.jpg'); /* Replace with actual image */
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+/* Text container */
+.header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: xx-large;
+}
+
+/* Other sections background placeholders 
+#section2 { background-image: url('https://via.placeholder.com/1920x1080/33FF57/FFFFFF?text=About+Us'); }
+#section3 { background-image: url('https://via.placeholder.com/1920x1080/3357FF/FFFFFF?text=Gallery'); }
+#section4 { background: black; } /* Video section 
+#section5 { background-image: url('https://via.placeholder.com/1920x1080/FF33A1/FFFFFF?text=Testimonials'); }
+#section6 { background-image: url('https://via.placeholder.com/1920x1080/A133FF/FFFFFF?text=Contact+Us'); }*/
+
+/* Video section */
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+p, blockquote, figcaption {
+  font-family: 'Merriweather', serif;
+  font-weight: lighter;
+  color:white;
+  padding: 15px;
+  border-radius: 5px;
+}
+h1{
+  color:rgb(255, 165, 180);
+  font-family: 'Abril Fatface', serif;
+  font-weight: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.6); /* Dark glow effect */
+}
+h2{
+  font-family: 'Merriweather', serif;
+  font-weight: lighter;
+  margin-top: -35px;
+  font-size: xx-large;
+  color:rgb(255, 165, 180);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.6); /* Dark glow effect */
+}
+h3{
+  font-family: 'Merriweather', serif;
+  font-weight: lighter;
+  font-size:medium;
+  color:rgb(255, 165, 180);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.6); /* Dark glow effect */
+}
+h4{
+  font-family: 'Merriweather', serif;
+  font-weight: lighter;
+  font-size:x-large;
+  color:white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.6); /* Dark glow effect */
+}
+blockquote{
+  font-size: xx-large;
+  font-family: 'Abril Fatface', serif;
+  width: 70%;
+  height:70%;
+  display: flex;
+  justify-content: center; /* Center content */
+  align-items: center;
+}
+.stacked-container {
+  display: flex;
+  flex-direction: column; /* Stack divs vertically */
+  gap: 10px; /* Space between divs */
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+/* Sticky Welcome Message */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease-in-out;
+  z-index: 1000; /* Ensure it stays on top */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.6); /* Dark glow effect */
+}
+article, footer, blockquote{
+  background: rgb(0,0,0,0.4);
+}
+a{
+  color:white;
+}
+a:visited{
+  color:white;
+}
+.travel-photos{
+  width: 70%;
+  height: 70%;
+  border-radius: 10%;
+  border: 5px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+#slideshow{
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
+}
+@media (max-width: 768px) {
+  p,h3,h4 {
+      font-size: medium; /* Reduce size for smaller screens */
+  }
+
+  h1,h2 {
+      font-size: x-large; /* Adjust paragraph and subheadings */
+  }
+}
+
+#root{
+  padding:0;
+  margin: 0;
+}
