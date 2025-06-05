@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import "../index.css"; // Adjust path if your CSS is elsewhere
 
 const images = [
-  "/assets/IMG_2486.JPEG",
-  "/assets/IMG_5050.JPEG",
-  "/assets/IMG_8563.JPEG",
-  "/assets/IMG_3984.jpg",
-  "/assets/cow"
+  "/images/IMG_2486.JPEG",
+  "/images/IMG_5050.JPEG",
+  "/images/IMG_8563.JPEG",
+  "/images/IMG_3984.jpg",
+  "/images/cow"
 ];
 
 function Home() {
