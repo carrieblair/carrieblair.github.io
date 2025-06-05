@@ -118,7 +118,7 @@ export const eventTodo = style({
     "&.smallFont": { fontSize: "10px" }, // For dynamic class change below!
   },
 });
-export const eventKids = style({
+export const eventTravel = style({
   background: "#ddd6fe", color: "#6d28d9", borderRadius: "8px",
   fontSize: "12px", fontWeight: 500, padding: "3px 8px", marginBottom: "2px",
   "@media": {

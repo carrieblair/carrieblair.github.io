@@ -20,7 +20,7 @@ const getCategoryClass = (cat) => {
     case "Atticus": return styles.eventAtticus;
     case "Family": return styles.eventFamily;
     case "To Do": return styles.eventTodo;
-    case "Kids": return styles.eventKids;
+    case "Travel": return styles.eventTravel;
     default: return styles.eventDefault;
   }
 };
@@ -131,7 +131,7 @@ const MonthlyView = ({ events }) => {
           <span className={styles.eventAtticus}>Atticus</span>
           <span className={styles.eventFamily}>Family</span>
           <span className={styles.eventTodo}>To Do</span>
-          <span className={styles.eventKids}>Kids</span>
+          <span className={styles.eventTravel}>Travel</span>
         </div>
       </div>
   );
