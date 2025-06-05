@@ -52,7 +52,7 @@ html, body {
   justify-content: center;
   scroll-snap-align: start;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.4); /* Optional: Dark overlay to enhance text visibility */
+  background: rgba(0, 0, 0, 0.7); /* Optional: Dark overlay to enhance text visibility */
 }
 
 #section1 {
