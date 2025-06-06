@@ -6,12 +6,12 @@ export const calendarGrid = style({
   gridTemplateColumns: 'repeat(7, 1fr)',
   gap: '2px',
   margin: '0 auto',
-  maxWidth: 910,
+  width:'100%'
 });
 
 export const dayCell = style({
-  minWidth: 130,
-  height: 140,
+  width: '100%',
+  height: '100%',
   background: 'white',
   border: '1px solid #ddd',
   padding: 12,

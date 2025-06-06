@@ -22,15 +22,15 @@ export const calendarGrid = style({
   gridTemplateColumns: "repeat(7, 1fr)",
   background: "#e5e7eb",
   borderRadius: "12px",
-  maxWidth: "910px",
+  width: "100%",
   margin: "0 auto",
 });
 
 export const dayCell = style({
   background: "white",
   border: "1px solid #d1d5db",
-  minWidth: "130px",
-  minHeight: "140px",         // Set min, but allow it to grow!
+  width: "100%",
+  height: "100%",         // Set min, but allow it to grow!
   padding: "12px",
   fontSize: "14px",
   position: "relative",
