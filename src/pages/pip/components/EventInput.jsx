@@ -1,3 +1,4 @@
+/* 
 import { useState } from "react";
 
 const EventInput = ({ onEventParsed }) => {
@@ -70,4 +71,76 @@ const EventInput = ({ onEventParsed }) => {
   );
 };
 
-export default EventInput;
+export default EventInput; */
+
+// src/components/EventInput.jsx
+import { useState } from "react";
+import { collection, addDoc, Timestamp } from "firebase/firestore";
+import { db } from "../firebase";
+
+export default function EventInput() {
+  const [title, setTitle] = useState("");
+  const [category, setCategory] = useState("");
+  const [date, setDate] = useState("");
+  const [endDate, setEndDate] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!title || !category || !date) {
+      alert("Please fill in all required fields");
+      return;
+    }
+
+    try {
+      await addDoc(collection(db, "events"), {
+        name: title,
+        category,
+        dateTime: Timestamp.fromDate(new Date(date)),
+        endDate: endDate ? Timestamp.fromDate(new Date(endDate)) : Timestamp.fromDate(new Date(date)),
+      });
+
+      // Reset fields
+      setTitle("");
+      setCategory("");
+      setDate("");
+      setEndDate("");
+
+      //alert("Event added!");
+    } catch (err) {
+      console.error("Error adding event:", err);
+      alert("Failed to add event");
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit} style={{ marginTop: "1rem" }}>
+      <input
+        type="text"
+        placeholder="Event Title"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+        required
+      />
+      <input
+        type="text"
+        placeholder="Category"
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
+        required
+      />
+      <input
+        type="date"
+        value={date}
+        onChange={(e) => setDate(e.target.value)}
+        required
+      />
+      <input
+        type="date"
+        value={endDate}
+        onChange={(e) => setEndDate(e.target.value)}
+        placeholder="Optional End Date"
+      />
+      <button type="submit">Add Event</button>
+    </form>
+  );
+}

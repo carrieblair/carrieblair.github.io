@@ -1,4 +1,13 @@
-import { useState } from "react";
+import { db } from "./firebase";
+import {
+  collection,
+  getDocs,
+  addDoc,
+  onSnapshot,
+  query,        // ← you need this!
+  orderBy,
+} from "firebase/firestore";
+import { useEffect, useState } from "react";
 import MonthlyView from "./components/MonthlyView";
 import WeeklyView from "./components/WeeklyView";
 import EventInput from "./components/EventInput";
@@ -6,10 +15,14 @@ import EventInput from "./components/EventInput";
 import * as styles from "./components/monthlyView.css";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
+import { Timestamp } from "firebase/firestore";
+import { format } from "date-fns";
 
 function App() {
   const [view, setView] = useState("month");
-  const [events, setEvents] = useState([
+  const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
+  /*
     { title: "Beach Day", date: "2025-05-31", category: "Family" },
     { title: "No School", date: "2025-06-01", category: "Family" },
     { title: "Pool Day", date: "2025-06-01", category: "Family" },
@@ -49,12 +62,42 @@ function App() {
     { title: "Fly to ATL, land at 4p", date: "2025-07-10", category: "Travel" },
     { title: "Atticus Drive to Kansas", date: "2025-07-15", category: "Travel" },
     { title: "Fly to Kansas", date: "2025-08-10", category: "Travel" },
-  ]);
-  const [activeView, setActiveView] = useState("month"); // or pass this as prop
+  ]);*/
 
-  const handleAddEvent = (event) => {
-    setEvents((prev) => [...prev, event]);
+  // Load events from Firestore on mount
+  useEffect(() => {
+    setLoading(true);
+    const q = query(collection(db, "events"), orderBy("dateTime"));
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      const eventList = [];
+      querySnapshot.forEach((doc) => {
+        const data = doc.data();
+        console.log("Raw Firestore dateTime:", data.dateTime);
+        console.log("Raw Firestore name:", data.name);
+        eventList.push({ 
+          id: doc.id,
+          category: data.category,
+          date: format(data.dateTime.toDate(), "yyyy-MM-dd"),
+          endDate: format(data.endDate.toDate(), "yyyy-MM-dd"),
+          title: data.name, 
+        });
+      });
+      setEvents(eventList);
+      setLoading(false);
+      });
+    return () => unsubscribe();
+  }, []);
+
+   // Add event to Firestore
+  const handleAddEvent = async (event) => {
+    try {
+      await addDoc(collection(db, "events"), event);
+    } catch (err) {
+      alert("Failed to add event: " + err.message);
+    }
   };
+
+  const [activeView, setActiveView] = useState("month"); // or pass this as prop
 
   const handleExportPDF = async () => {
     // Get the calendar element by ID or ref
@@ -93,9 +136,6 @@ function App() {
               Month View
             </button>
           </div>
-          <button className={styles.addEventButton}>
-            Add Event
-          </button>
           <div style={{ background: "transparent", border: "none" }}>
             <button onClick={handleExportPDF} style={{ marginLeft: "1rem" }}>
               Export to PDF
@@ -105,7 +145,18 @@ function App() {
         </div>
 
 
-    {view === "month" ? <MonthlyView events={events} /> : <WeeklyView />}
+    {/* Show loading state if still fetching */}
+        {loading ? (
+          <div className="text-center p-6">Loading events...</div>
+        ) : (
+          <>
+            
+            {activeView === "month"
+              ? <MonthlyView events={events} />
+              : <WeeklyView />}
+            <EventInput onEventParsed={handleAddEvent} />
+          </>
+        )}
   </div>
 </div>
 
